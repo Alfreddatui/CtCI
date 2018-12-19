@@ -3,7 +3,7 @@ class LinkedList {
     this.root = null;
   }
 
-  insert(value) {    
+  insert(value) {
     let node = this.root;
     if (!node) {
       this.root = new Node(value);
@@ -32,15 +32,18 @@ class LinkedList {
    }
 
   getRoot(value) {
-    // console.log("WOW");
     return this.root;
   }
 
   printList() {
     let node = this.root;
     let total = "";
+    
+    if (node == null) {
+      return null;
+    }
 
-    while(node.next != null) {
+    while(node != null) {
       total += node.value + " -> ";
       node = node.next;
     }
@@ -57,10 +60,14 @@ class LinkedList {
 
   insertTail(value) {
     let node = this.root;
-    while(node.next != null) {
-      node = node.next;
+    if (!node) {
+      this.root = new Node(value);
+    } else {
+      while(node.next != null) {
+        node = node.next;
+      }
+      node.next = new Node(value);
     }
-    node.next = new Node(value);
   }
 }
 
@@ -80,5 +87,5 @@ ll.insert(5);
 ll.insert(6);
 ll.insertAt(4, 3);
 ll.insertHead(0);
-ll.insertTail(6)
+ll.insertTail(7);
 console.log(ll.printList());
