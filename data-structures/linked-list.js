@@ -1,3 +1,26 @@
+// advantages:
+// items can be added in the middle of the list
+// no fixed size
+
+// disadvantages:
+// no random access => arr[4], to get the data, time complexit is O(n)
+// dynamic memory allocation and pointers are required that makes the code complicated and increase the risk of memory leaks and segment faults
+// larger overheads compare to a normal array because it use pointer.
+
+
+// https://www.quora.com/When-would-you-use-a-linked-list
+// when to use:
+// when we need constant time insertion/deletions from the list( dynamic array time is not constant, most of the time O(1) but when increaseing the size, O(n))
+// dont know how many items will be in the list.
+// we dont need random access elements
+// want to be able to insert in the middle of the array.
+
+// dont use:
+// you need random access element
+// you know the number of element
+// memory is a concern
+// we need speed when iterating throgh all the elements in sequence.
+
 class LinkedList {
   constructor() {
     this.root = null;
