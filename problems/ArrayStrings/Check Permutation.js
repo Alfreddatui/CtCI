@@ -20,6 +20,10 @@ function checkPermutation(s1, s2) {
   }
 
   for (let i = 0; i < ln2; i++) {
+    if (arr[s2[i].charCodeAt(0)] == 0) {
+      return false;
+    }
+
     arr[s2[i].charCodeAt(0)]--;
     if (arr[s2[i].charCodeAt(0)] < 0) {
       return false;
