@@ -1,6 +1,6 @@
 // Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 // First of all try to ask, what kind of strings? ASCII (7 bits means 128 chars) or Unicode? What about lowercase and uppercase? E
-
+// Remember the step though, dont rush to the answer. Instead, state the brute and optimize from that.
 function isUnique(string) {
   // assume ASCII 128 chars
   const ln = string.length;
