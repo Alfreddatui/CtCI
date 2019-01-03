@@ -13,15 +13,18 @@ function palindromePerms(s1) {
 		}
 	}
 
-	let nonRepeatedChars = 0;
+	let foundOdd = false
 	for (let i = 0; i < 128; i++) {
 		if (arr[i]%2 == 1) {
-      nonRepeatedChars++;
+			if (foundOdd) {
+				return false;
+			}
+			foundOdd = true;
     }
 	}
 
-  return nonRepeatedChars <= 1 ? true : false;
+  return true;
 }
 
-const input = "tact   c oaoiz   ";
+const input = "tact   c oaoi   ";
 console.log(palindromePerms(input));
