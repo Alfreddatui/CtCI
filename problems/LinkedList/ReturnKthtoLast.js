@@ -105,6 +105,6 @@ ll.insert(6);
 const head = ll.getRoot();
 // let count = [0]
 // const kLastNode = recursive2(head, 5, count);
-let count = [0]
+// let count = [0]
 const kLastNode = twoPointer(head, 5);
 console.log(printList(kLastNode));
