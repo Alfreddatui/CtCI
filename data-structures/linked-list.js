@@ -54,7 +54,7 @@ class LinkedList {
     }
    }
 
-  getRoot(value) {
+  getRoot() {
     return this.root;
   }
 
@@ -101,14 +101,16 @@ class Node {
   }
 }
 
-let ll = new LinkedList();
-let root = ll.getRoot();
-ll.insert(1);
-ll.insert(2);
-ll.insert(3);
-ll.insert(5);
-ll.insert(6);
-ll.insertAt(4, 3);
-ll.insertHead(0);
-ll.insertTail(7);
-console.log(ll.printList());
+// let ll = new LinkedList();
+// let root = ll.getRoot();
+// ll.insert(1);
+// ll.insert(2);
+// ll.insert(3);
+// ll.insert(5);
+// ll.insert(6);
+// ll.insertAt(4, 3);
+// ll.insertHead(0);
+// ll.insertTail(7);
+// console.log(ll.printList());
+
+module.exports = LinkedList;
