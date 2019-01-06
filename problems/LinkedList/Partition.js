@@ -67,6 +67,32 @@ function betterSolutions(head, value) {
   return beforeStart;
 }
 
+function anotherSimpleSolution(head, value) {
+  // putting node value that is bigger than value at tail and node value that is smaller at the head
+  let node = head;
+  let headP = node;
+  let tailP = node;
+  node = node.next;
+  let temp;
+
+  while (node != null) {
+    if (node.value < value) {
+      temp = node.next;
+      node.next = headP;
+      headP = node;
+
+      node = temp;
+    } else {
+      tailP.next = node;
+      tailP = node;
+      node = node.next;
+    }
+  }
+  tailP.next = null;
+
+  return headP;
+}
+
 // Import the data structures and helper function
 const LinkedList = require("../../data-structures/linked-list");
 const { printList } = require("../../helper/helper");
@@ -87,5 +113,5 @@ ll.insert(1);
 // get the head pointer
 let head = ll.getRoot();
 console.log(printList(head));
-head = betterSolutions(head, 5);
+head = anotherSimpleSolution(head, 6);
 console.log(printList(head));
