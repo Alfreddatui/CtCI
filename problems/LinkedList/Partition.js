@@ -73,20 +73,19 @@ function anotherSimpleSolution(head, value) {
   let headP = node;
   let tailP = node;
   node = node.next;
-  let temp;
+  let next;
 
   while (node != null) {
+    next = node.next;
     if (node.value < value) {
-      temp = node.next;
       node.next = headP;
       headP = node;
-
-      node = temp;
     } else {
       tailP.next = node;
       tailP = node;
-      node = node.next;
     }
+
+    node = next;
   }
   tailP.next = null;
 
