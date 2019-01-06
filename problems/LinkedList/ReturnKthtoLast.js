@@ -87,24 +87,25 @@ const ll = new LinkedList();
 // 1 -> 1 -> 1 -> 2 -> 3 -> 3 -> 3 -> 3 -> 3 -> 4 -> 5 -> 5 -> 6 -> 6
 // length 14
 ll.insert(1);
-ll.insert(1);
-ll.insert(1);
-ll.insert(2);
-ll.insert(3);
-ll.insert(3);
-ll.insert(3);
-ll.insert(3);
-ll.insert(3);
-ll.insert(4);
-ll.insert(5);
-ll.insert(5);
-ll.insert(6);
-ll.insert(6);
+// ll.insert(1);
+// ll.insert(1);
+// ll.insert(2);
+// ll.insert(3);
+// ll.insert(3);
+// ll.insert(3);
+// ll.insert(3);
+// ll.insert(3);
+// ll.insert(4);
+// ll.insert(5);
+// ll.insert(5);
+// ll.insert(6);
+// ll.insert(6);
 
 // get the head pointer
 const head = ll.getRoot();
+console.log(head);
 // let count = [0]
 // const kLastNode = recursive2(head, 5, count);
 // let count = [0]
-const kLastNode = twoPointer(head, 5);
-console.log(printList(kLastNode));
+// const kLastNode = twoPointer(head, 5);
+// console.log(printList(kLastNode));
