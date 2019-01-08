@@ -41,7 +41,7 @@ function removeDups(head) {
 }
 
 // Import the data structures
-const LinkedList = require("../../data-structures/linked-list");
+const { LinkedList } = require("../../data-structures/linked-list");
 
 // initialization
 const ll = new LinkedList();

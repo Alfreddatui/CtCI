@@ -93,7 +93,7 @@ function anotherSimpleSolution(head, value) {
 }
 
 // Import the data structures and helper function
-const LinkedList = require("../../data-structures/linked-list");
+const { LinkedList } = require("../../data-structures/linked-list");
 const { printList } = require("../../helper/helper");
 
 

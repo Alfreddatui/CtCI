@@ -113,4 +113,7 @@ class Node {
 // ll.insertTail(7);
 // console.log(ll.printList());
 
-module.exports = LinkedList;
+module.exports = {
+  LinkedList,
+  Node
+};
