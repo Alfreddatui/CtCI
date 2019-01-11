@@ -1,29 +1,46 @@
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
+// function Stacks() {
+//   this.data = [];
+//   this.top = 0;
+// }
+
+// Stacks.prototype.push = function(value) {
+//   this.data[this.top++] = value;
+// }
+
+// Stacks.prototype.pop = function() {
+//   return this.data[--this.top];
+// }
+
+// Stacks.prototype.peek = function () {
+//   return this.data[this.top - 1];
+// }
+
+// Stacks.prototype.isEmpty = function () {
+//   return this.top == 0 ? true : false;
+// }
+
+class Stacks {
+  constructor(arr) {
+    this.data = arr ? arr : [];
+    this.top = 0;
   }
-}
 
-function Stacks() {
-  this.data = [];
-  this.top = 0;
-}
+  // arrow function will bind Stacks = this (because environemnt is stack)
+  push (value) {
+    this.data[this.top++] = value;
+  }
 
-Stacks.prototype.push = function(value) {
-  this.data[this.top++] = value;
-}
+  pop () {
+    return this.data[--this.top];
+  }
 
-Stacks.prototype.pop = function() {
-  return this.data[--this.top];
-}
+  peek () {
+    return this.data[this.top - 1];
+  }
 
-Stacks.prototype.peek = function () {
-  return this.data[this.top - 1];
-}
-
-Stacks.prototype.isEmpty = function () {
-  return this.top == 0 ? true : false;
+  isEmpty () {
+    return this.top == 0 ? true : false;
+  }
 }
 
 let stack = new Stacks();
