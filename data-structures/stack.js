@@ -23,6 +23,7 @@ class StackDS {
   constructor(arr) {
     this.data = arr ? arr : [];
     this.top = 0;
+    this.size = 2;
   }
 
   // arrow function will bind StackDS = this (because environemnt is stack)
@@ -41,6 +42,14 @@ class StackDS {
   isEmpty () {
     return this.top == 0 ? true : false;
   }
+
+  printS () {
+    console.log(this.data.slice(0, this.top));
+  }
+}
+
+StackDS.prototype.isFull = function() {
+  return this.data.slice(0, this.top).length == this.size ? true : false;
 }
 
 module.exports = {
