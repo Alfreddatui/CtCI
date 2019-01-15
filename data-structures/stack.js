@@ -45,6 +45,7 @@ class StackDS {
 
   printS () {
     console.log(this.data.slice(0, this.top));
+    return this.data.slice(0, this.top);
   }
 }
 
