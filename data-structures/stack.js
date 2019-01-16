@@ -36,6 +36,9 @@ class StackDS {
   }
 
   peek () {
+    if (this.isEmpty()) {
+      return null;
+    }
     return this.data[this.top - 1];
   }
 
