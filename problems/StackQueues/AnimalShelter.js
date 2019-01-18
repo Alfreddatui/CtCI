@@ -118,5 +118,13 @@ AnimalQ.printQ();
 AnimalQ.dequeueCat();
 AnimalQ.printQ();
 
-// with this appraoch, the enqueue, dequeue time complexity are O(1) while dequeueCat and dequeueDog are O(n).
+// with this appraoch, the enqueue, dequeue time complexity are O(1) while dequeueCat and dequeueDog are O(n). space complexity is O(n) -> to create a queue right??
 // for the space complexity, all of them are O(1)
+
+
+
+// after looking at the solution, the appraoch is to use 2 different queues, one for dog and one for cat. and for every node, we have the timestamp(number that specify the order)
+// and for dequeueDog and dequeueCat, time complexity will be O(1) for both
+
+// and for dequeueAny, peek to both queue and compare the order, and deuqeuue the lower order. complexity is O(1) too
+// indeed, this is a better solution
