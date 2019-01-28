@@ -14,6 +14,25 @@ function printList(node) {
   return total;
 }
 
+function printTree(node) {
+  let total = "";
+  total = [total];
+  recursivePrint(node, total);
+  return total[0];
+}
+
+function recursivePrint(node, total) {
+  if (node == null) {
+    return;
+  }
+  total[0] += "(";
+  recursivePrint(node.left, total);
+  total[0] += " " + node.value + " ";
+  recursivePrint(node.right, total);
+  total[0] += ")";
+}
+
 module.exports = {
-  printList
+  printList,
+  printTree
 }
