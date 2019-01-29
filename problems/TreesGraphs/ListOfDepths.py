@@ -85,7 +85,7 @@ def ListOfDepths(arr, level, node):
   if Lnode is None:
     arr[level] = LlistNode
   else:
-    while Lnode.next != None:
+    while Lnode.next != None: # this one can be faster by using linked list method add (O(1))
       print("WOW")
       Lnode = Lnode.next
     Lnode.next = LlistNode
